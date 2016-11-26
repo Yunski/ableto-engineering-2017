@@ -1,0 +1,45 @@
+{{ define "content" }}
+<div id="survey-background">
+    <div id="survey">
+        <h1 class="section-title">Survey</h1>
+        <p id="question">{{ index .Questions .Session.QuestionIndex }}</p>
+        <div id="answers">
+            <div class="row">
+                <div class="col-lg-6">
+                    <button id="btn-0">
+                        <span id="choice0">
+                            {{ index .Answers .Session.QuestionIndex 0}}
+                        </span>
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <button id="btn-1">
+                        <span id="choice1">
+                            {{ index .Answers .Session.QuestionIndex 1}}
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button id="btn-2">
+                        <span id="choice2">
+                            {{ index .Answers .Session.QuestionIndex 2}}
+                        </span>
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <button id="btn-3">
+                        <span id="choice3">
+                            {{ index .Answers .Session.QuestionIndex 3}}
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="progress">
+            <p>Question {{ .Session.CurQuestion }} / 4</p>
+        </div>
+    </div>
+</div>
+{{ end }}

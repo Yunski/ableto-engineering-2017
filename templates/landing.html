@@ -1,0 +1,13 @@
+{{ define "content" }}
+<div id="landing">
+    <div class="alert alert-danger fade in" role="alert">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Hi there!</strong> Please log in before taking survey.
+    </div>
+    <div class="bottom-align"></div>
+    <form id="survey-request" action="/survey" method="get"></form>
+    <button id="start-survey-button" type="submit" form="survey-request" class="btn btn-secondary">Take Survey</button>
+</div>
+{{ end }}

@@ -1,0 +1,5 @@
+test:
+    environment:
+        - PATH=/usr/local/go_appengine:$PATH
+    build: .
+    entrypoint: go test -v .

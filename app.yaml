@@ -1,0 +1,27 @@
+#runtime: go
+#api_version: go1
+runtime: custom
+api_version: 1
+vm: true
+
+handlers:
+- url: /stylesheets
+  mime_type: 'text/css'
+  static_dir: stylesheets
+- url: /templates
+  mime_type: 'text/html'
+  static_dir: templates
+- url: /img
+  mime_type: 'image/jpeg'
+  static_dir: img
+- url: /js
+  mime_type: 'text/javascript'
+  static_dir: js
+- url: /login/*
+  script: _go_app
+  secure: always
+- url: /api/*
+  script: _go_app
+  secure: always
+- url: /.*
+  script: _go_app

@@ -1,0 +1,17 @@
+{{ define "navbar" }}
+
+<nav class="navbar navbar-light navbar-fixed-top bg-faded navbar-full" id="nav-main">
+    <a class="navbar-brand" href="/">Behaviorix</a>
+    <ul class="nav navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Yunski/ableto-engineering-2017">Source</a>
+        </li>
+    </ul>
+    {{ template "login" . }}
+    {{ template "register" . }}
+</nav>
+
+{{ end }}
